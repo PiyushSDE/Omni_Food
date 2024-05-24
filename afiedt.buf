@@ -1,0 +1,4 @@
+select last_name,department_name
+from employees,departments
+where employees.department_id=departments.location_id
+/

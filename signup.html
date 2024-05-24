@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="vender\css\bootstrap.css">
+    <link rel="stylesheet" href="resources\css\signup.css">
+  </head>
+  <body>
+    <h1>SignUp</h1>
+    <form  action="/" method="post" class="form">
+      <div class="row">
+        <div class="col-lg-6">
+            <label>Name</label>
+        </div>
+        <div class="col-lg-6">
+            <input type="text" name="name" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+            <label>Password</label>
+        </div>
+        <div class="col-lg-6">
+            <input type="password" name="password" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+            <label>mobile no</label>
+        </div>
+        <div class="col-lg-6">
+            <input type="text" name="mobile" required minlength="10" maxlength="10">
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-lg-6">
+              <label>Address</label>
+          </div>
+          <div class="col-lg-6">
+              <input type="text" name="address" required>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-lg-6">
+                <label>Email</label>
+            </div>
+            <div class="col-lg-6">
+                <input type="email" id="mail" name="email" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+                <label>select plan</label>
+            </div>
+            <div class="col-lg-6">
+                <select name="plan">
+                  <option value="premium">Primium</option>
+                  <option value="pro">Pro</option>
+                  <option value="starter">Starter</option>
+                </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+                <label></label>
+            </div>
+            <div class="col-lg-6">
+                <button type="submit" name="submit" class="btn btn-dark btn-md">SignUp</button>
+            </div>
+          </div>
+    </form>
+
+  </body>
+  <script>
+  var email = document.getElementById("mail");
+  email.addEventListener("input", function (event) {
+    if (email.validity.typeMismatch) {
+      email.setCustomValidity("I expect an e-mail!");
+    } else {
+      email.setCustomValidity("");
+    }
+  });
+  </script>
+</html>
